@@ -1,0 +1,54 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int num, element;
+    vector v<int>;
+    vector <int>::iterator it; 
+    
+    // i) adding elements
+    cout<<"Enter the number of elements in the vector: ";
+    cin>>num;
+    cout<<"Enter the elements:\n";
+    for (int i=0; i<num; i++)
+    {
+        cin>>element;
+        v[i]=element;
+    }
+    
+    // ii) accessing elements by displaying
+    
+    cout<<"\nPrinting vector v = (";
+    for (it=v.begin();it!=v.end();it++)
+        cout<<" "<<*it<<",";
+    cout<<")\n";
+    
+    // iii) changing element
+    
+    int choice, newval; 
+    cout<<"which index do you need to change?: ";
+    cin>>choice;
+    
+    if (choice >=0 && choice<=v.size())
+    {
+        cout<<"\n enter the new value: ";
+        cin>>newval;
+        v[choice]=newval;
+    }
+    else
+    {
+        cout<<"Cannot replace an out of index element.\n"
+    }
+    
+    // iv) removing an element
+    v.pop_back();
+    v.popback();
+    
+        cout<<"\nPrinting vector v = (";
+    for (it=v.begin();it!=v.end();it++)
+        cout<<" "<<*it<<",";
+    cout<<")\n";
+    
+}
